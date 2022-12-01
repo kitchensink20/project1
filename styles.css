@@ -2,20 +2,34 @@
     font-family: RobotoMono-Regular;
     src: url(fonts/static/RobotoMono-Regular.ttf);
 }
+
 @font-face {
     font-family: RobotoMono-Bold;
     src: url(fonts/static/RobotoMono-Bold.ttf);
 }
+
 html, body{
+    background-color: #DCC2F8;
+    font-family: RobotoMono-Regular;
     margin: 0;
     padding: 0;
     height: 100%;
 }
-body{
-    background-color: #DCC2F8;
-    font-family: RobotoMono-Regular;
-    position: relative;
+
+button{
+    font-family: RobotoMono-Bold;
+    font-size: 0.8em;
+    background-color: #85fac1;
+    color:white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0.9em 1.2em;
 }
+
+button:hover{
+    box-shadow: 6px 2px 3px #000;
+}
+
 header{
     position: relative;
     background-color: white;
@@ -27,35 +41,37 @@ header{
     display: flex;
     align-items: center;
 }
+
 header #logo{
-    height: 55px;
+    height: 3.5em;
     margin-left: 35%;
 }
-header #myChosenBtn{
-    background-color: #85fac1;
-    color:white;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 12px 25px;
-    position: relative;
-    left: 70%;
-    font-family: RobotoMono-Bold;
-    font-size: 12px;
-}
-button:hover{
-    box-shadow: 6px 2px 3px #000;
-}
+
 header #heart{
     height: 45px;
-    position: relative;
-    left:70%;
 }
+
+header .btnPicBlock{
+    display: flex;
+    height:45px;
+    margin-left: 71%;
+}
+
 .backgroundImg{
-    position: absolute;
-    width: 25%;
-    left: 5%;
-    top: 25%;
+    width: 22em;
+    height: auto;
+    margin: auto 0;
+    margin-right: 3%;
 }
+
+.mainSect{
+    padding: 5em 0;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .decorator{
     margin: 0 auto;
     top: 0;
@@ -67,52 +83,59 @@ header #heart{
     border-right: 5px solid black;
     border-left: 5px solid black;
 }
+
 footer{
     background-color: black;
     margin: 0;
-    margin-top: 80px;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 50px;
     color: white;
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
+    font-size: 0.8rem;
 }
+
 .displayBlock{
     background-color: white;
-    margin-top: 50px;
     margin-bottom: 0;
-    position: relative;
-    left: 35%;
     height: 600px;
     width: 55%;
     border: 3px solid black;
     display: flex;
 }
+
 .displayBlock:hover{
     box-shadow: 6px 2px 3px #000;
 }
-.displayBlock img{
+
+.displayBlock .controlPanel input[type="image"]{
     position: relative;
     height:100%;
-    margin:0;
+    margin: 0 auto;
 }
+
 .displayBlock article{
     position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .displayBlock article h2{ 
     margin: 3% 10%;
     text-shadow:  3px 3px #85fac1;
 }
+
 .displayBlock article p{ 
     margin: 0 auto;
     width: 80%;
     padding: 10px;
+    font-size: 1em;
 }
+
 .controlPanel{
     width: 80%;
     height: 70px;
@@ -122,31 +145,290 @@ footer{
     display: flex;
     align-items: center;
 }
-.controlPanel img{
+
+.controlPanel input[type="image"]{
     height:70px;
-    margin: auto;
+    margin: 0 auto;
 }
-.controlPanel img:hover{
+
+.controlPanel input[type="image"]:hover{
     height: 80px;
 }
-.animeLinkBtn{
-    background-color: #85fac1;
-    color:white;
-    border: 1px solid black;
-    border-radius: 20px;
-    position: relative;
-    bottom: -10%;
-    padding: 12px 25px;
+
+#animeLinkBtn{
     margin: 0 auto;
-    width: 30%;
-    font-family: RobotoMono-Bold;
-    font-size: 12px;
+    width: 120px;
 }
+
 .keyWords{
     text-shadow:  3px 3px #85fac1;
     font-family: RobotoMono-Bold;
 }
-footer a{
+
+footer span{
     margin: auto;
-    font-size: 13px;
+}
+
+@media (max-width: 300px) {
+    header{
+        height: fit-content;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    header #logo{
+        height: 50px;
+        margin: 5px auto;
+    }
+
+    header .btnPicBlock{
+        margin: 10px auto;
+        width: 70%;
+    }
+
+    .displayBlock{
+        flex-direction: column;
+        width: 85%;
+        height: fit-content;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+
+    .displayBlock .controlPanel{
+        margin-top: 10px;
+    }
+
+    .displayBlock article p, .displayBlock article h2{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .decorator{
+        display: none;
+    }
+
+    .mainSect{
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .backgroundImg{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 840px) {
+    header{
+        height: 80px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header #logo{
+        height: 3em;
+        margin:0;
+        margin-left: 10px;
+    }
+
+    .decorator{
+        display: none;
+    }
+
+    header .btnPicBlock{
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .displayBlock{
+        flex-direction: column;
+        width: 90%;
+        height:fit-content;
+        padding-bottom: 15px;
+        margin: 0 auto;
+    }
+
+    .mainSect{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    .backgroundImg{
+        margin-bottom:15px;
+        margin-top: 0;
+    }
+
+    #animeLinkBtn{
+        margin-bottom: 10px;
+    }
+
+    footer{
+        position: relative;
+    }
+}
+
+@media (min-width:500px) and (max-width: 1200px){
+
+    .mainSect{
+        flex-direction: column;
+    }
+
+    .displayBlock article h2{ 
+        margin: 3% auto;
+        width:90%;
+        text-shadow:  3px 3px #85fac1;
+    }
+    
+    .displayBlock article p{ 
+        margin: 0 auto;
+        width: 90%;
+    }    
+
+    header{
+        justify-content: space-around;
+    }
+
+    .backgroundImg{
+        width: 60%;
+        margin: 10px auto;
+    }
+
+    .displayBlock{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    header .btnPicBlock{
+        margin:0;
+    }
+
+    .displayBlock #animeLinkBtn{
+        margin-bottom: 20px;
+        width: 40%;
+    }
+
+    .controlPanel{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px){
+    .backgroundImg{
+        width:40%;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    header .btnPicBlock{
+        margin-right: 6%;
+    }
+
+    .displayBlock article #animeLinkBtn{
+        width: 120px;
+    }
+}
+
+@media (min-width:840px) and (max-width: 880px){
+    .decorator{
+        display: none;
+    }
+
+    .displayBlock{
+        width: 90%;
+        height: 800px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px){
+    header .btnPicBlock{
+        margin-left: 65%;
+    }
+
+    .backgroundImg{
+        width: 20%;
+    }
+    
+    .displayBlock{
+        width: 60%;
+    }
+
+    .displayBlock article .controlPanel{
+        margin: 0 auto;
+    }
+
+    .displayBlock #animeLinkBtn{
+        margin-bottom: 20px;
+        width: 40%;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1800px){
+    header{
+        height: 80px;
+    }
+
+    header #logo{
+        height: 60px;
+    }
+
+    header .btnPicBlock{
+        margin-left: 73%;
+    }
+
+    .displayBlock{
+        width: 60%;
+    }
+
+    .displayBlock #animeLinkBtn{
+        width: 140px;
+    }
+
+    .displayBlock article p, .displayBlock article h2{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    header{
+        height: 80px;
+        justify-content: space-between;
+    }
+
+    header .btnPicBlock{
+        margin: 0;
+        margin-right: 5%;
+    }
+
+    header #logo{
+        margin: 0;
+        margin-left: 40%;
+    }
+
+    .displayBlock article p, .displayBlock article h2{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .displayBlock #animeLinkBtn{
+        width: 140px;
+    }
+}
+
+@media (min-width: 1900px){
+    header #logo{
+        margin-left: 50%;
+    }
 }

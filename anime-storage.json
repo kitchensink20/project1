@@ -1,0 +1,30 @@
+[
+{
+    "title": "The promised Neverland",
+    "genre": "Dark fantasy, Science fiction, Thriller",
+    "year": "2019",
+    "description": "When three gifted kids at an isolated idyllic orphanage discover the secret and sinister purpose they were raised for, they look for a way to escape from their evil caretaker and lead the other children in a risky escape plan.",
+    "id": 0
+},
+{
+    "title": "Death note",
+    "genre": "Mystery, Psychological thriller, Supernatural thriller",
+    "year": "2003",
+    "description": "Based on the famous Japanese manga written by Tsugumi Ohba and Takeshi Obata, Death Note follows a high school student who comes across a supernatural notebook, realizing it holds within it a great power; if the owner inscribes someone's name into it while picturing their face, he or she will die.",
+    "id": 1
+},
+{
+    "title": "Hunter-Hunter",
+    "genre": "Adventure, Fantasy, Martial arts",
+    "year": "2011",
+    "description": "",
+    "id": 2
+},
+{
+    "title": "Death note",
+    "genre": "",
+    "year": "",
+    "description": "",
+    "id": 
+}
+]
