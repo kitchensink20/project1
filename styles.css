@@ -28,6 +28,7 @@ button{
 
 button:hover{
     box-shadow: 6px 2px 3px #000;
+    cursor: pointer;
 }
 
 header{
@@ -125,13 +126,13 @@ footer{
 }
 
 .displayBlock article h2{ 
-    margin: 3% 10%;
+    margin: 3% 5%;
     text-shadow:  3px 3px #85fac1;
 }
 
 .displayBlock article p{ 
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     padding: 10px;
     font-size: 1em;
 }
@@ -141,7 +142,7 @@ footer{
     height: 70px;
     position: relative;
     bottom: 20%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 }
@@ -153,6 +154,7 @@ footer{
 
 .controlPanel input[type="image"]:hover{
     height: 80px;
+    cursor: pointer;
 }
 
 #animeLinkBtn{

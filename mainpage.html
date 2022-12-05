@@ -21,14 +21,13 @@
     <section class="mainSect">
         <img src="pics/bgrimg.png" class="backgroundImg" alt="">
         <section class="displayBlock">
-            <img src="pics/anime/0.jpg" alt="animeCover" id="animeCover">
+            <img src="" alt="animeCover" id="animeCover">
             <section class="about">
                 <article>
-                    <h2>{{title}}</h2>
-                    <hr>
-                    <p><span class="keyWords">Year of release:</span> {{year}}</p>
-                    <p><span class="keyWords">Genre:</span> {{genre}}</p>
-                    <p><span class="keyWords">Description:</span><br>{{description}}</p>
+                    <h2 id="title"></h2>
+                    <p><span class="keyWords">Year of release: </span><span id="year"></span></p>
+                    <p><span class="keyWords">Genre: </span><span id="genre"></span></p>
+                    <p><span class="keyWords">Description:</span><br><span  id="description"></span></p>
                     <button id="animeLinkBtn">watch now!</button>
                 </article>
                     <form class="controlPanel" method="get">
@@ -42,9 +41,8 @@
         <span>&#169 2022 Anider, Inc.</span>
     </footer>
 
-    <script src="mustache.min.js"></script>
-    <script src="main-script.js"></script>
     <script src="anime-block-manager.js"></script>
+    <script src="main-script.js"></script>
 </body>
 
 </html>
