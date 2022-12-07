@@ -1,6 +1,28 @@
 class AnimeShowManager{
     constructor(arrayOfAnime){
         this.arrayOfAnime = arrayOfAnime;
+        this.amountOfAnime = arrayOfAnime.length;
+    }
+
+    getArrayOfAnime(){
+        return this.arrayOfAnime;
+    }
+
+    getAmountOfAnime(){
+        return this.amountOfAnime;
+    }
+
+    shuffleAnimes(){
+        let currentIndex = this.arrayOfAnime.length,  
+            randomIndex;
+
+        while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [this.arrayOfAnime[currentIndex], this.arrayOfAnime[randomIndex]] = [
+            this.arrayOfAnime[randomIndex], this.arrayOfAnime[currentIndex]];
+    }
     }
 
     refreshAnimeBlock(index){

@@ -19,7 +19,7 @@
     "title": "Hunter-Hunter",
     "genre": "Adventure, Fantasy, Martial arts",
     "year": "2011",
-    "description": "",
+    "description": "The story focuses on a young boy named Gon Freecss who discovers that his father, who left him at a young age, is actually a world-renowned Hunter, a licensed professional who specializes in fantastical pursuits such as locating rare or unidentified animal species, treasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Gon departs on a journey to become a Hunter and eventually find his father.",
     "animeLink": "https://www.crunchyroll.com/series/GY3VKX1MR/hunter-x-hunter",
     "id": 2
 },
@@ -102,5 +102,29 @@
     "description": "Neon Genesis Evangelion tells the story of Shinji Ikari, a student recruited to pilot a giant biomechanical robot created to fight mysterious alien-like entities (known as Angels) attacking the post-cataclysm territory of Tokyo-3.",
     "animeLink": "https://www.netflix.com/title/81033445",
     "id": 12
+},
+{
+    "title": "Banana fish",
+    "genre": "Drama, thriller",
+    "year": "2018",
+    "description": "Simply put, Banana Fish is the story of rebellion and revenge by Ash Lynx against his former “master.” Thought to be cold-hearted to a fault, Ash has that demeanor broken when he comes in contact with a Japanese boy named Eiji Okumura, who came to America as a photography assistant to a news reporter looking to run a story on Ash. An intangible friendship between the two of them develops and Ash gains a secondary purpose of protecting Eiji and preserving their friendship at any cost.",
+    "animeLink": "https://9anime.vc/watch/banana-fish-163?ep=4135",
+    "id": 13
+},
+{
+    "title": "Bleach",
+    "genre": "Action, Adventure, Comedy, Shounen, Super Power, Supernatural",
+    "year": "2004",
+    "description": "Bleach is a strong and effective disinfectant. Its active ingredient, sodium hypochlorite, denatures protein in micro-organisms and is therefore effective in killing bacteria, fungus and viruses. Household bleach works quickly and is widely available at a low cost.",
+    "animeLink": "https://9anime.vc/watch/bleach-806?ep=13793",
+    "id": 14
+},
+{
+    "title": "Steins Gate",
+    "genre": "Drama, Science fiction, Comedy, Thriller",
+    "year": "2018",
+    "description": "The series follow Rintaro Okabe, who together with his friends accidentally discovers a method of time travel through which they can send text messages to the past, thereby changing the present.",
+    "animeLink": "https://www.crunchyroll.com/series/GYWE7W5GY/steinsgate",
+    "id": 15
 }
 ]
