@@ -5,23 +5,24 @@ let arrayLength;
 fetch('./anime-storage.json')
     .then((response) => { return response.json(); })
     .then((data)  => { 
-        let animeShowManager = new AnimeShowManager(data); 
+        animeShowManager = new AnimeShowManager(data); 
         arrayLength = animeShowManager.getAmountOfAnime();
+        //animeShowManager.shuffleAnimes();
 
-        animeShowManager.shuffleAnimes();
-
+     
         if(localStorage.getItem("animeId"))
             index = this.localStorage.getItem("animeId");
         else
             index = 0;
         
+
         animeShowManager.refreshAnimeBlock(index);
 
     });
 
 document.querySelector("#like").addEventListener("click", function(){
     if(index < arrayLength-1){
-        if(++index != animeShowManager.getArrayOfAnime()[index].id)
+        if(index+1 != animeShowManager.getArrayOfAnime()[index].id)
             index++;
     }
     else
