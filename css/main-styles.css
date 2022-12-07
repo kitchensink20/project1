@@ -26,6 +26,10 @@ button{
     padding: 0.9em 1.2em;
 }
 
+.headerBtn{
+    width: 100%;
+}
+
 button:hover{
     box-shadow: 6px 2px 3px #000;
     cursor: pointer;
@@ -160,6 +164,10 @@ footer{
 #animeLinkBtn{
     margin: 0 auto;
     width: 120px;
+}
+
+#animeLink{
+    margin: 0 auto;
 }
 
 .keyWords{

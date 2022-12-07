@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mfpt</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/main-styles.css">
 </head>
 
 <body>
     <div class="decorator"></div>
     <header>
-        <a href="#"><img src="pics/logo.jpg" title="anider" id="logo" alt="logo"></a>
+        <a href="#"><img src="../pics/logo.jpg" title="anider" id="logo" alt="logo"></a>
         <div class="btnPicBlock">
-            <img src="pics/pixelheart.png" id="heart" alt="">
-            <button id="myChosenBtn">my chosen ones</button>
+            <img src="../pics/pixelheart.png" id="heart" alt="">
+            <a href="./my-favourite-ones.html">
+                <button class="headerBtn" >my chosen ones</button>
+            </a>
         </div>
     </header>
     <section class="mainSect">
-        <img src="pics/bgrimg.png" class="backgroundImg" alt="">
+        <img src="../pics/bgrimg.png" class="backgroundImg" alt="">
         <section class="displayBlock">
             <img src="" alt="animeCover" id="animeCover">
             <section class="about">
@@ -28,11 +30,11 @@
                     <p><span class="keyWords">Year of release: </span><span id="year"></span></p>
                     <p><span class="keyWords">Genre: </span><span id="genre"></span></p>
                     <p><span class="keyWords">Description:</span><br><span  id="description"></span></p>
-                    <button id="animeLinkBtn">watch now!</button>
+                    <a id="animeLink" href="" target="_blank"><button id="animeLinkBtn">watch now!</button></a>
                 </article>
                 <form class="controlPanel" method="get">
-                    <input type="image" src="pics/pixelheart.png" id="like" alt="like-button">
-                    <input type="image" src="pics/brokenheart.png" id="dislike" alt="dislike-button">
+                    <input type="image" src="../pics/pixelheart.png" id="like" alt="like-button">
+                    <input type="image" src="../pics/brokenheart.png" id="dislike" alt="dislike-button">
                 </form>
             </section>
         </section>

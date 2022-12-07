@@ -1,13 +1,17 @@
-let animeShowManager;
-let index;
-let arrayLength;
+let animeShowManager, 
+    index,
+    arrayLength;
 
-fetch('./anime-storage.json')
+if(localStorage.getItem("animeJson")){
+    
+}
+
+fetch('../anime-storage.json')
     .then((response) => { return response.json(); })
     .then((data)  => { 
         animeShowManager = new AnimeShowManager(data); 
         arrayLength = animeShowManager.getAmountOfAnime();
-        //animeShowManager.shuffleAnimes();
+        animeShowManager.shuffleAnimes();
 
      
         if(localStorage.getItem("animeId"))

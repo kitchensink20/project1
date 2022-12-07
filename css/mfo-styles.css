@@ -1,0 +1,9 @@
+.animes-container{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+header .btnPicBlock{
+    margin-left: 73%;
+}
