@@ -1,9 +1,88 @@
+.wrapper{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* empty list view */
+
+.empty-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#emptyListPic{
+    width: 20%;
+    margin: auto;
+}
+
+.empty-container h2{
+    text-shadow:  3px 3px #85fac1;
+    margin: 0 auto;
+}
+
+/* full list view */
+
 .animes-container{
-    width: 85%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 80px;
+}
+
+#animes-container{
+    flex: 1 1 auto;
+    margin: 60px auto;
+    width: 85%;
 }
 
 header .btnPicBlock{
     margin-left: 73%;
+}
+
+.animeBlock{
+    border: 3px solid black;
+    background-color: white;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.animeBlock:hover{
+    box-shadow: 6px 2px 3px #000;
+}
+
+.animeTitle{
+    text-shadow:  3px 3px #85fac1;
+}
+
+#animeLinkPic:hover{
+    cursor: pointer;
+}
+
+#animeLinkPic{
+    height: 320px;
+    margin: 10px auto;
+    border: 3px solid black;
+}
+
+.animeCover:hover{
+    cursor: pointer;
+}
+
+.animeCover{
+    height: 100%;
+}
+
+.animeBlock h3{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#moreBtn{
+    width: 100px;
+    padding: 8px 4px;
+    margin: 5px auto;
 }

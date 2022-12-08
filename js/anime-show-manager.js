@@ -33,4 +33,39 @@ class AnimeShowManager{
         document.querySelector("#genre").textContent = this.arrayOfAnime[index].genre;
         document.querySelector("#animeLink").href =this.arrayOfAnime[index].animeLink;
     }
+
+    addFavouriteAnime(index){
+        let favouriteAnimes = JSON.parse(localStorage.getItem("favouriteAnimes"));
+        if(favouriteAnimes == null) favouriteAnimes = [];
+
+        let currentAnime = this.arrayOfAnime[index];
+        favouriteAnimes.push(currentAnime);
+
+        localStorage.setItem("favouriteAnimes", JSON.stringify(favouriteAnimes));
+    }
+
+    showFavouriteAnimes(){
+        if(localStorage.getItem("favouriteAnimes")){
+            document.getElementById("animes-container").classList.remove("empty-container");
+            document.getElementById("animes-container").classList.add("animes-container");
+            let temp = document.getElementsByTagName("template")[0];
+
+            this.favouriteAnimes = JSON.parse(localStorage.getItem("favouriteAnimes"));
+
+            document.querySelector("#animes-container").innerHTML = "";
+
+            for(let i = 0; i < this.favouriteAnimes.length; i++){
+                let tempClone = temp.content.cloneNode(true);
+                document.querySelector("#animes-container").append(tempClone);
+                document.querySelectorAll(".animeCover")[i].src = "../pics/anime/"  + this.favouriteAnimes[i].id + ".jpg";
+                document.querySelectorAll(".animeTitle")[i].textContent = this.favouriteAnimes[i].title;
+            }
+        }
+    }
+
+    removeAnimeFromList(index){
+        this.arrayOfAnime = JSON.parse(localStorage.getItem("allAnimes"));
+        
+        //this.arrayOfAnime.splice
+    }
 }

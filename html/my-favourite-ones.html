@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="decorator"></div>
+    <div class="wrapper">
     <header>
         <a href="#"><img src="../pics/logo.jpg" title="anider" id="logo" alt="logo"></a>
         <div class="btnPicBlock">
@@ -18,16 +19,25 @@
             </a>
         </div>
     </header>
-    <section class="animes-container">
-
+    <section id="animes-container" class="empty-container">
+        <h2>Oh no! Your list is empty :(</h2>
+        <img src="../pics/depression.png" title="depressedPic" id="emptyListPic" alt="">
     </section>
 
     <footer>
         <span>&#169 2022 Anider, Inc.</span>
     </footer>
+    </div>
 
     <template>
-
+        <div class="animeBlock" id="one">
+            <a id="animeLinkPic" href="" target="_blank"><img src="" title="animeCover" class="animeCover" alt="animeCover"></a>
+            <h3 class="animeTitle">{{title}}</h3>
+            <button id="moreBtn">more..</button>
+        </div>
     </template>
+
+    <script src="../js/anime-show-manager.js"></script>
+    <script src="../js/main-script.js"></script>
 </body>
 </html>
