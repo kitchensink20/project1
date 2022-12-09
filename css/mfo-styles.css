@@ -4,6 +4,12 @@
     flex-direction: column;
 }
 
+/* header */
+
+header .btnPicBlock{
+    margin-left: 73%;
+}
+
 /* empty list view */
 
 .empty-container{
@@ -24,28 +30,37 @@
 
 /* full list view */
 
-.animes-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 80px;
-}
-
 #animes-container{
     flex: 1 1 auto;
     margin: 60px auto;
     width: 85%;
 }
 
-header .btnPicBlock{
-    margin-left: 73%;
+.animes-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 480px;
+    grid-gap: 80px;
+}
+
+#crossBtnForm{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right:0;
+}
+
+#crossBtn{
+    width: 100%;
+    height: 100%;
 }
 
 .animeBlock{
     border: 3px solid black;
     background-color: white;
-    height: 480px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .animeBlock:hover{
@@ -56,22 +71,24 @@ header .btnPicBlock{
     text-shadow:  3px 3px #85fac1;
 }
 
-#animeLinkPic:hover{
-    cursor: pointer;
-}
-
 #animeLinkPic{
     height: 320px;
+    width: 85%;
     margin: 10px auto;
     border: 3px solid black;
 }
 
-.animeCover:hover{
+#animeLinkPic:hover{
     cursor: pointer;
 }
 
 .animeCover{
     height: 100%;
+    width: 100%;
+}
+
+.animeCover:hover{
+    cursor: pointer;
 }
 
 .animeBlock h3{

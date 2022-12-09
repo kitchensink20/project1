@@ -57,8 +57,16 @@ class AnimeShowManager{
             for(let i = 0; i < this.favouriteAnimes.length; i++){
                 let tempClone = temp.content.cloneNode(true);
                 document.querySelector("#animes-container").append(tempClone);
+
                 document.querySelectorAll(".animeCover")[i].src = "../pics/anime/"  + this.favouriteAnimes[i].id + ".jpg";
                 document.querySelectorAll(".animeTitle")[i].textContent = this.favouriteAnimes[i].title;
+
+                document.querySelectorAll("#crossBtn")[i].addEventListener("mouseover", (e) => { e.target.src="../pics/crossHover.png" });
+                document.querySelectorAll("#crossBtn")[i].addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
+                document.querySelectorAll("#crossBtn")[i].addEventListener("click", () => {
+                    this.removeAnimeFromFavourites(i);
+                    this.favouriteAnimes.splice(i, 1);
+                });
             }
         }
     }
@@ -69,5 +77,17 @@ class AnimeShowManager{
         this.arrayOfAnime.splice(index, 1);
 
         localStorage.setItem("allAnimes", JSON.stringify(this.arrayOfAnime));
+    }
+
+    removeAnimeFromFavourites(index){
+        let favAnimes = JSON.parse(localStorage.getItem("favouriteAnimes"));
+        
+        favAnimes.splice(index, 1);
+
+        if(favAnimes.length == 0){
+            localStorage.removeItem("favouriteAnimes");
+        }
+        else
+            localStorage.setItem("favouriteAnimes", JSON.stringify(favAnimes));
     }
 }

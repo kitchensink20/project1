@@ -150,5 +150,53 @@
     "description": "Mitsuha and Taki are total strangers living completely different lives. But when Mitsuha makes a wish to leave her mountain town for the bustling city of Tokyo, they become connected in a bizarre way. She dreams she is a boy living in Tokyo while Taki dreams he is a girl from a rural town he’s never visited. What does their newfound connection mean? And how will it bring them together? Find out in the latest film from the acclaimed auteur Makoto Shinkai.",
     "animeLink": "https://www.crunchyroll.com/series/G9VHN9PK3/your-name",
     "id": 18
+},
+{
+    "title": "Terror in Resonance",
+    "genre": "Psychological thriller",
+    "year": "2014",
+    "description": "In an alternative iteration of the present, two teenage boys who go by the names Nine and Twelve steal a prototype atomic bomb in an apparent terrorist attack. Calling themselves 'Sphinx', they upload a video onto the Internet and threaten to destroy Tokyo city unless a cryptic riddle can be solved. They are two of the survivors of a secret experiment by the Rising Peace Academy to develop orphaned children with Savant syndrome into human weapons. They befriend Lisa, a lonely high school girl, who becomes caught up in their plans to expose the nefarious activities of the organization.",
+    "animeLink": "https://www.justwatch.com/us/tv-show/terror-in-resonance",
+    "id": 19
+},
+{
+    "title":"Parasyte",
+    "genre":"Body horror, Horror thriller, Science fiction",
+    "year":"2014",
+    "description":"They arrived in silence and darkness, descending from the skies with a hunger for human flesh. Parasites - alien creatures who must invade and take control of a human host to survive – have come to Earth. No one knows their secret except high school student, Shinichi Izumi, who’s right hand has been invaded by an alien parasite. Shinichi and Migi, the parasite in his hand, begrudgingly form a friendship and find themselves caught in the middle of a war between humans and parasites.",
+    "animeLink":"https://www.crunchyroll.com/series/G6K53VGGY/parasyte--the-maxim-",
+    "id": 20
+},
+{
+    "title":"Yuri on Ice",
+    "genre":"Sports (figure skating)",
+    "year":"2016",
+    "description":"Yuri Katsuki carried the hope of all Japan on his shoulders in the Figure Skating Grand Prix, but suffered a crushing defeat in the finals. He returned to his hometown in Kyushu and hid away in his family's home, half wanting to continue skating and half wanting to retire. That was when the five-time consecutive world champion, Victor Nikiforov, suddenly showed up with his teammate, Yuri Plisetsky, a young skater starting to surpass his seniors. And so the two Yuris and the Russian champion Viktor set out to compete in a Grand Prix like none the world has ever seen!",
+    "animeLink":"https://www.crunchyroll.com/series/GY2PEJ0MY/yuri-on-ice",
+    "id": 21
+},
+{
+    "title":"Sword Art Online",
+    "genre":"Action, Adventure, Fantasy, Sci-fi",
+    "year":"2012",
+    "description":"In the near future, a Virtual Reality Massive Multiplayer Online Role-Playing Game (VRMMORPG) called Sword Art Online has been released where players control their avatars with their bodies using a piece of technology called: Nerve Gear. One day, players discover they cannot log out, as the game creator is holding them captive unless they reach the 100th floor of the game's tower and defeat the final boss. However, if they die in the game, they die in real life. Their struggle for survival starts now...",
+    "animeLink":"https://www.crunchyroll.com/series/GR49G9VP6/sword-art-online",
+    "id":22
+},
+{
+    "title":"Dr. Stone",
+    "genre":"Adventure, Post-apocalyptic, Science fiction",
+    "year":"2019",
+    "description":"Several thousand years after a mysterious phenomenon that turns all of humanity to stone, the extraordinarily intelligent, science-driven boy, Senku Ishigami, awakens. Facing a world of stone and the total collapse of civilization, Senku makes up his mind to use science to rebuild the world. Starting with his super strong childhood friend Taiju Oki, who awakened at the same time, they will begin to rebuild civilization from nothing... Depicting two million years of scientific history from the Stone Age to present day, the unprecedented crafting adventure story is about to begin!",
+    "animeLink":"https://www.crunchyroll.com/series/GYEXQKJG6/dr-stone",
+    "id":23
+},
+{
+    "title":"Vinland Saga",
+    "genre":"Adventure, Epic, Historical",
+    "year":"2019",
+    "description":"Vinland Saga is a Japanese manga series written and illustrated by YUKIMURA Makoto. The series is set in a historical depiction of Europe during Viking times, and depicts the life of Thorfinn, a young warrior who joins the mercenary band of Askeladd to get revenge on his father, Thors.",
+    "animeLink":"https://www.anime-planet.com/anime/vinland-saga",
+    "id":24
 }
 ]
