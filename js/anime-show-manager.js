@@ -66,6 +66,8 @@ class AnimeShowManager{
     removeAnimeFromList(index){
         this.arrayOfAnime = JSON.parse(localStorage.getItem("allAnimes"));
         
-        //this.arrayOfAnime.splice
+        this.arrayOfAnime.splice(index, 1);
+
+        localStorage.setItem("allAnimes", JSON.stringify(this.arrayOfAnime));
     }
 }

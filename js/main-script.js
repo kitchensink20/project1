@@ -44,5 +44,6 @@ document.querySelector("#like").addEventListener("click", function(){
 });
 
 document.querySelector("#dislike").addEventListener("click", function(){
+    animeShowManager.removeAnimeFromList(index);
     localStorage.setItem("animeId", ++index); 
 });
