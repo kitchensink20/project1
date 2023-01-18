@@ -1,8 +1,13 @@
 class AnimeShowManager{
+
+    //---------concructor-------------------------------
+
     constructor(arrayOfAnime){
         this.arrayOfAnime = arrayOfAnime;
         this.amountOfAnime = arrayOfAnime.length;
     }
+
+    //---------getters---------------------------------
 
     getArrayOfAnime(){
         return this.arrayOfAnime;
@@ -11,6 +16,8 @@ class AnimeShowManager{
     getAmountOfAnime(){
         return this.amountOfAnime;
     }
+
+    //--------methods for the main page----------------
 
     shuffleAnimes(){
         let currentIndex = this.arrayOfAnime.length,  
@@ -32,7 +39,41 @@ class AnimeShowManager{
         document.querySelector("#description").textContent = this.arrayOfAnime[index].description;
         document.querySelector("#genre").textContent = this.arrayOfAnime[index].genre;
         document.querySelector("#animeLink").href =this.arrayOfAnime[index].animeLink;
+        /*console.log("dvsd;");
+        this._downloadImage("../pics/anime/"  + this.arrayOfAnime[index].id + ".jpg")
+            .then(() => {
+                document.querySelector("#animeCover").src = "../pics/anime/"  + this.arrayOfAnime[index].id + ".jpg";
+                console.log("dfvskd")
+                //document.querySelector("#animeCover").src = this.arrayOfAnime[index].imgSrc;
+                document.querySelector("#title").textContent = this.arrayOfAnime[index].title;
+                document.querySelector("#year").textContent = this.arrayOfAnime[index].year;
+                document.querySelector("#description").textContent = this.arrayOfAnime[index].description;
+                document.querySelector("#genre").textContent = this.arrayOfAnime[index].genre;
+                document.querySelector("#animeLink").href =this.arrayOfAnime[index].animeLink;
+            }, err => {
+                console.log(err.message);
+            });*/
     }
+
+    removeAnimeFromList(index){
+        this.arrayOfAnime = JSON.parse(localStorage.getItem("allAnimes"));
+        
+        this.arrayOfAnime.splice(index, 1);
+
+        localStorage.setItem("allAnimes", JSON.stringify(this.arrayOfAnime));
+    }
+
+    showInfoAboutEmptyDB(){
+        let animeInfoBlock = document.querySelector('.mainSect');
+        animeInfoBlock.querySelectorAll('*').forEach(el => {
+            el.style.display = 'none'; 
+        });
+
+        let emptyDBBlock = document.querySelector('.emptyDB');
+        emptyDBBlock.style.display = 'flex';
+    }
+
+    //--------methods for my-favourite-ones page--------------
 
     addFavouriteAnime(index){
         let favouriteAnimes = JSON.parse(localStorage.getItem("favouriteAnimes"));
@@ -60,8 +101,9 @@ class AnimeShowManager{
 
                 document.querySelectorAll(".animeCover")[i].src = "../pics/anime/"  + this.favouriteAnimes[i].id + ".jpg";
                 document.querySelectorAll(".animeTitle")[i].textContent = this.favouriteAnimes[i].title;
+                document.querySelectorAll(".animeLinkPic")[i].href = this.favouriteAnimes[i].animeLink; 
 
-                document.querySelectorAll("#crossBtn")[i].addEventListener("mouseover", (e) => { e.target.src="../pics/crossHover.png" });
+                document.querySelectorAll("#crossBtn")[i].addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
                 document.querySelectorAll("#crossBtn")[i].addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
                 document.querySelectorAll("#crossBtn")[i].addEventListener("click", () => {
                     this.removeAnimeFromFavourites(i);
@@ -69,14 +111,6 @@ class AnimeShowManager{
                 });
             }
         }
-    }
-
-    removeAnimeFromList(index){
-        this.arrayOfAnime = JSON.parse(localStorage.getItem("allAnimes"));
-        
-        this.arrayOfAnime.splice(index, 1);
-
-        localStorage.setItem("allAnimes", JSON.stringify(this.arrayOfAnime));
     }
 
     removeAnimeFromFavourites(index){
@@ -89,5 +123,30 @@ class AnimeShowManager{
         }
         else
             localStorage.setItem("favouriteAnimes", JSON.stringify(favAnimes));
+    }
+
+
+
+
+
+
+
+
+
+    _downloadImage(url){
+        let promise = new Promise(function(resolve, reject){
+            let image;
+            image.src = url;
+
+            image.onload = function() {
+                resolve(image);
+            }
+
+            image.onerror = function(e) {
+                reject(new Error("Failed to load image " + url));
+            }
+        });
+
+        return promise;
     }
 }

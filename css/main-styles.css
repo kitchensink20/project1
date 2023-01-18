@@ -180,6 +180,30 @@ footer span{
     margin: auto;
 }
 
+/* main sect when anime database is empty */
+
+.emptyDB{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 10%;
+    padding: 0;
+    margin-top: -80px;
+}
+
+.emptyDB img{
+    width: 23%;
+    height: auto;
+    margin: 30px auto;
+}
+
+.emptyDB h2{
+    text-shadow:  3px 3px #85fac1;
+    margin: 10px auto;
+}
+
+/* adapting for different screen sizes */
+
 @media (max-width: 300px) {
     header{
         height: fit-content;

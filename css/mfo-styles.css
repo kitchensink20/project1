@@ -71,7 +71,7 @@ header .btnPicBlock{
     text-shadow:  3px 3px #85fac1;
 }
 
-#animeLinkPic{
+.animeLinkPic{
     height: 320px;
     width: 85%;
     margin: 10px auto;
