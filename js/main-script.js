@@ -16,6 +16,10 @@ if(!document.getElementById("animes-container")){ // if main-page.html is opened
             localStorage.setItem("allAnimes", JSON.stringify(data));
     
             animeShowManager.refreshAnimeBlock(index);
+
+            setTimeout(() => {
+                animeShowManager.showMessageWindow();
+              }, "1500")
         });
     }
     else if(!document.getElementById("animes-container")){

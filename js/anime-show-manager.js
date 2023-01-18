@@ -73,6 +73,14 @@ class AnimeShowManager{
         emptyDBBlock.style.display = 'flex';
     }
 
+    showMessageWindow(){
+        document.querySelector("#infoWindow").style.display = "flex";
+
+        document.querySelector("#closeBtn").addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
+        document.querySelector("#closeBtn").addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
+        document.querySelector("#closeBtn").addEventListener("click", function() { document.querySelector("#infoWindow").style.display = "none"; });
+    }
+
     //--------methods for my-favourite-ones page--------------
 
     addFavouriteAnime(index){
