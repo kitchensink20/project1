@@ -24,6 +24,21 @@
         <img src="../pics/depression.png" title="depressedPic" id="emptyListPic" alt="">
     </section>
 
+    <!---- window for more button--->
+    <div id="vagueBackground"></div>
+    <div id="moreAnimeData">
+        <img src="../pics/cross.png" id="closeBtn" alt="close-button" title="close">
+        <img src="" title="animeCover"  id="animeImg" alt="img">
+        <section class="about">
+            <article>
+                <h3 id="title"></h3>
+                <p><span class="keyWords">Year of release: </span><span id="year"></span></p>
+                <p><span class="keyWords">Genre: </span><span id="genre"></span></p>
+                <p><span class="keyWords">Description:</span><br><span  id="description"></span></p>
+            </article>
+        </section>
+    </div>
+
     <footer>
         <span>&#169 2022 Anider, Inc.</span>
     </footer>
@@ -31,12 +46,12 @@
 
     <template>
         <div class="animeBlock" id="one">
-            <form id="crossBtnForm">
-                <input type="image" src="../pics/cross.png" id="crossBtn" alt="delete-button" title="delete">
+            <form class="crossBtnForm">
+                <input type="image" src="../pics/cross.png" class="crossBtn" alt="delete-button" title="delete">
             </form>
             <a class="animeLinkPic" href="" target="_blank"><img src="" title="animeCover" class="animeCover" alt="animeCover"></a>
             <h3 class="animeTitle">{{title}}</h3>
-            <button id="moreBtn">more..</button>
+            <button class="moreBtn">more..</button>
         </div>
     </template>
 

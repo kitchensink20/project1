@@ -39,20 +39,6 @@ class AnimeShowManager{
         document.querySelector("#description").textContent = this.arrayOfAnime[index].description;
         document.querySelector("#genre").textContent = this.arrayOfAnime[index].genre;
         document.querySelector("#animeLink").href =this.arrayOfAnime[index].animeLink;
-        /*console.log("dvsd;");
-        this._downloadImage("../pics/anime/"  + this.arrayOfAnime[index].id + ".jpg")
-            .then(() => {
-                document.querySelector("#animeCover").src = "../pics/anime/"  + this.arrayOfAnime[index].id + ".jpg";
-                console.log("dfvskd")
-                //document.querySelector("#animeCover").src = this.arrayOfAnime[index].imgSrc;
-                document.querySelector("#title").textContent = this.arrayOfAnime[index].title;
-                document.querySelector("#year").textContent = this.arrayOfAnime[index].year;
-                document.querySelector("#description").textContent = this.arrayOfAnime[index].description;
-                document.querySelector("#genre").textContent = this.arrayOfAnime[index].genre;
-                document.querySelector("#animeLink").href =this.arrayOfAnime[index].animeLink;
-            }, err => {
-                console.log(err.message);
-            });*/
     }
 
     removeAnimeFromList(index){
@@ -111,11 +97,42 @@ class AnimeShowManager{
                 document.querySelectorAll(".animeTitle")[i].textContent = this.favouriteAnimes[i].title;
                 document.querySelectorAll(".animeLinkPic")[i].href = this.favouriteAnimes[i].animeLink; 
 
-                document.querySelectorAll("#crossBtn")[i].addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
-                document.querySelectorAll("#crossBtn")[i].addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
-                document.querySelectorAll("#crossBtn")[i].addEventListener("click", () => {
+                document.querySelectorAll(".crossBtn")[i].addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
+                document.querySelectorAll(".crossBtn")[i].addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
+                document.querySelectorAll(".crossBtn")[i].addEventListener("click", () => {
                     this.removeAnimeFromFavourites(i);
                     this.favouriteAnimes.splice(i, 1);
+                });
+
+                document.querySelectorAll(".moreBtn")[i].addEventListener("click", () => {
+                    // to show the window
+                    document.querySelector("#moreAnimeData").style.display = "flex";
+                    document.querySelector("#vagueBackground").style.display = "block";
+
+                    // to fill the window
+                    document.querySelector("#animeImg").src = "../pics/anime/"  + this.favouriteAnimes[i].id + ".jpg";
+                    document.querySelector("#title").textContent = this.favouriteAnimes[i].title;
+                    document.querySelector("#genre").textContent = this.favouriteAnimes[i].genre;
+                    document.querySelector("#description").textContent = this.favouriteAnimes[i].description;
+                    document.querySelector("#year").textContent = this.favouriteAnimes[i].year;
+
+                    // to close the window
+                    document.querySelector("#vagueBackground").addEventListener("click", () => {
+                        document.querySelector("#moreAnimeData").style.display = "none";
+                        document.querySelector("#vagueBackground").style.display = "none";
+                    });
+                    document.addEventListener("keydown", (e) => {
+                        if(e.key == 'Escape'){
+                            document.querySelector("#moreAnimeData").style.display = "none";
+                            document.querySelector("#vagueBackground").style.display = "none";
+                        }
+                    });
+                    document.querySelector("#closeBtn").addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
+                    document.querySelector("#closeBtn").addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
+                    document.querySelector("#closeBtn").addEventListener("click", () => { 
+                        document.querySelector("#moreAnimeData").style.display = "none";
+                        document.querySelector("#vagueBackground").style.display = "none";
+                    });
                 });
             }
         }
@@ -131,30 +148,5 @@ class AnimeShowManager{
         }
         else
             localStorage.setItem("favouriteAnimes", JSON.stringify(favAnimes));
-    }
-
-
-
-
-
-
-
-
-
-    _downloadImage(url){
-        let promise = new Promise(function(resolve, reject){
-            let image;
-            image.src = url;
-
-            image.onload = function() {
-                resolve(image);
-            }
-
-            image.onerror = function(e) {
-                reject(new Error("Failed to load image " + url));
-            }
-        });
-
-        return promise;
     }
 }

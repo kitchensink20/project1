@@ -43,14 +43,14 @@ header .btnPicBlock{
     grid-gap: 80px;
 }
 
-#crossBtnForm{
+.crossBtnForm{
     width: 12px;
     height: 12px;
     position: absolute;
     right:0;
 }
 
-#crossBtn{
+.crossBtn{
     width: 100%;
     height: 100%;
 }
@@ -98,8 +98,58 @@ header .btnPicBlock{
     margin-bottom: 5px;
 }
 
-#moreBtn{
+.moreBtn{
     width: 100px;
     padding: 8px 4px;
     margin: 5px auto;
 }
+
+/* more info view */
+
+#vagueBackground{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    opacity: 0.6;
+}
+
+#moreAnimeData{
+    display: none;
+    flex-direction: row;
+    margin: auto;
+    padding-right: 10px;
+    width: 50%;
+    height:450px;
+    background-color: white;
+    border: 3px solid black;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#animeImg{
+    height: 100%;
+    width: auto;
+    margin: 0;
+    margin-right: 2%;
+}
+
+#closeBtn{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right:0;
+    cursor: pointer;
+}
+
+h3#title{
+    text-shadow:  3px 3px #85fac1;
+    margin: 4px auto;
+}
+
+

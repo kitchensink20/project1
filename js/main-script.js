@@ -17,9 +17,13 @@ if(!document.getElementById("animes-container")){ // if main-page.html is opened
     
             animeShowManager.refreshAnimeBlock(index);
 
-            setTimeout(() => {
-                animeShowManager.showMessageWindow();
-              }, "1500")
+            let userAgent = navigator.userAgent.toLowerCase();  
+            let isDesktop = !/(android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini)/i.test(userAgent);
+            if (isDesktop) {
+                setTimeout(() => {
+                    animeShowManager.showMessageWindow();
+                }, "1500");
+            }
         });
     }
     else if(!document.getElementById("animes-container")){
