@@ -193,13 +193,17 @@ footer span{
     padding: 15px;
     position: fixed;
     bottom: 0;
-    right: 30px;
+    right: 25px;
     border: 3px solid black;
     background-color: white;
     opacity: 0.8;
     height: 100px;
     width: 300px;
-    animation: fadein 1.5s;
+    animation: fadein 1s;
+}
+
+#infoWindow:hover{
+    opacity: 1;
 }
 
 #closeBtn{
@@ -235,7 +239,7 @@ footer span{
     flex-direction: column;
     justify-content: center;
     margin: 50px 10%;
-    padding: 0;
+    padding: 0 50px;
     margin-top: -80px;
 }
 
@@ -251,6 +255,8 @@ footer span{
 }
 
 /* adapting for different screen sizes */
+
+/* for full db */
 
 @media (max-width: 300px) {
     header{
@@ -539,5 +545,14 @@ footer span{
 @media (min-width: 1900px){
     header #logo{
         margin-left: 50%;
+    }
+}
+
+/* for empty db */
+
+@media (max-width: 850px){
+    .emptyDB img{
+        width: 200px;
+        margin-bottom: 50px;
     }
 }

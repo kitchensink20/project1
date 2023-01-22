@@ -37,7 +37,8 @@ if(!document.getElementById("animes-container")){ // if main-page.html is opened
     }
 
     document.querySelector("#like").addEventListener("click", () => {
-        animeShowManager.addFavouriteAnime(index);
+        if(index < Number(JSON.parse(localStorage.getItem("totalAnimesAmount"))))
+            animeShowManager.addFavouriteAnime(index);
 
         index++;   
         localStorage.setItem("animeId", index); 
