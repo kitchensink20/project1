@@ -33,7 +33,7 @@ class AnimeShowManager{
     }
 
     refreshAnimeBlock(index){
-        document.querySelector("#animeCover").src = "../pics/anime/"  + this.arrayOfAnime[index].id + ".jpg";
+        document.querySelector("#animeCover").src = "../imgs/anime/"  + this.arrayOfAnime[index].id + ".jpg";
         document.querySelector("#title").textContent = this.arrayOfAnime[index].title;
         document.querySelector("#year").textContent = this.arrayOfAnime[index].year;
         document.querySelector("#description").textContent = this.arrayOfAnime[index].description;
@@ -62,8 +62,8 @@ class AnimeShowManager{
     showMessageWindow(){
         document.querySelector("#infoWindow").style.display = "flex";
 
-        document.querySelector("#closeBtn").addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
-        document.querySelector("#closeBtn").addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
+        document.querySelector("#closeBtn").addEventListener("mouseover", (e) => { e.target.src="../imgs/crosshover.png" });
+        document.querySelector("#closeBtn").addEventListener("mouseout", (e) => { e.target.src="../imgs/cross.png" });
         document.querySelector("#closeBtn").addEventListener("click", function() { document.querySelector("#infoWindow").style.display = "none"; });
     }
 
@@ -93,12 +93,12 @@ class AnimeShowManager{
                 let tempClone = temp.content.cloneNode(true);
                 document.querySelector("#animes-container").append(tempClone);
 
-                document.querySelectorAll(".animeCover")[i].src = "../pics/anime/"  + this.favouriteAnimes[i].id + ".jpg";
+                document.querySelectorAll(".animeCover")[i].src = "../imgs/anime/"  + this.favouriteAnimes[i].id + ".jpg";
                 document.querySelectorAll(".animeTitle")[i].textContent = this.favouriteAnimes[i].title;
                 document.querySelectorAll(".animeLinkPic")[i].href = this.favouriteAnimes[i].animeLink; 
 
-                document.querySelectorAll(".crossBtn")[i].addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
-                document.querySelectorAll(".crossBtn")[i].addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
+                document.querySelectorAll(".crossBtn")[i].addEventListener("mouseover", (e) => { e.target.src="../imgs/crosshover.png" });
+                document.querySelectorAll(".crossBtn")[i].addEventListener("mouseout", (e) => { e.target.src="../imgs/cross.png" });
                 document.querySelectorAll(".crossBtn")[i].addEventListener("click", () => {
                     this.removeAnimeFromFavourites(i);
                     this.favouriteAnimes.splice(i, 1);
@@ -110,7 +110,7 @@ class AnimeShowManager{
                     document.querySelector("#vagueBackground").style.display = "block";
 
                     // to fill the window
-                    document.querySelector("#animeImg").src = "../pics/anime/"  + this.favouriteAnimes[i].id + ".jpg";
+                    document.querySelector("#animeImg").src = "../imgs/anime/"  + this.favouriteAnimes[i].id + ".jpg";
                     document.querySelector("#title").textContent = this.favouriteAnimes[i].title;
                     document.querySelector("#genre").textContent = this.favouriteAnimes[i].genre;
                     document.querySelector("#description").textContent = this.favouriteAnimes[i].description;
@@ -127,8 +127,8 @@ class AnimeShowManager{
                             document.querySelector("#vagueBackground").style.display = "none";
                         }
                     });
-                    document.querySelector("#closeBtn").addEventListener("mouseover", (e) => { e.target.src="../pics/crosshover.png" });
-                    document.querySelector("#closeBtn").addEventListener("mouseout", (e) => { e.target.src="../pics/cross.png" });
+                    document.querySelector("#closeBtn").addEventListener("mouseover", (e) => { e.target.src="../imgs/crosshover.png" });
+                    document.querySelector("#closeBtn").addEventListener("mouseout", (e) => { e.target.src="../imgs/cross.png" });
                     document.querySelector("#closeBtn").addEventListener("click", () => { 
                         document.querySelector("#moreAnimeData").style.display = "none";
                         document.querySelector("#vagueBackground").style.display = "none";
